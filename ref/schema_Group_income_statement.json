@@ -1,0 +1,810 @@
+{
+  "sheet": "Group income statement",
+  "approach": "xml",
+  "dimensions": {
+    "rows": 90,
+    "cols": 19
+  },
+  "merged_ranges": [
+    "A90:I90",
+    "B5:F5",
+    "H5:I5",
+    "B53:F53",
+    "H53:I53",
+    "B65:F65",
+    "H65:I65"
+  ],
+  "header_rows": [
+    {
+      "row_index": 0,
+      "labels": [
+        "HSBC"
+      ],
+      "bold": true,
+      "avg_font_size": 14.0
+    },
+    {
+      "row_index": 1,
+      "labels": [
+        "HSBC Holdings plc consolidated income statement"
+      ],
+      "bold": true,
+      "avg_font_size": 14.0
+    }
+  ],
+  "column_headers": {
+    "0": "HSBC Holdings plc consolidated income statement"
+  },
+  "sections": [
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Reported ($m)",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 46022.0,
+            "col_2": 45930.0,
+            "col_3": 45838.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Net interest income",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 9196.0,
+            "col_2": 8777.0,
+            "col_3": 8519.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Net fee income",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 3194.0,
+            "col_2": 3506.0,
+            "col_3": 3319.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Other operating income",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 3974.0,
+            "col_2": 5505.0,
+            "col_3": 4635.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Net operating income before change in expected credit losses and other credit impairment charges ('Revenue')",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 16364.0,
+            "col_2": 17788.0,
+            "col_3": 16473.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Change in expected credit losses and other credit impairment charges ('ECL')",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -901.0,
+            "col_2": -1008.0,
+            "col_3": -1065.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Total operating expenses",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -9330.0,
+            "col_2": -10076.0,
+            "col_3": -8920.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Share of profit in associates and joint ventures less impairment",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 669.0,
+            "col_2": 591.0,
+            "col_3": -162.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Profit/(loss) before tax",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 6802.0,
+            "col_2": 7295.0,
+            "col_3": 6326.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Tax credit/(charge)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -1615.0,
+            "col_2": -1792.0,
+            "col_3": -1455.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Profit/(loss) after tax",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 5187.0,
+            "col_2": 5503.0,
+            "col_3": 4871.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Profit/(loss) attributable to:",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {}
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "- ordinary shareholders of the parent company ('PAOS')",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 4719.0,
+            "col_2": 4873.0,
+            "col_3": 4578.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "- other equity holders of the parent company",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 225.0,
+            "col_2": 411.0,
+            "col_3": 155.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "- non-controlling interests",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 243.0,
+            "col_2": 219.0,
+            "col_3": 138.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Impairment of goodwill and other intangible assets (net of tax)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 80.0,
+            "col_2": 40.0,
+            "col_3": 24.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "PAOS net of goodwill impairment",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 4799.0,
+            "col_2": 4913.0,
+            "col_3": 4602.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "Constant currency  ($m)",
+      "items": [
+        {
+          "label": "Revenue",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 16364.0,
+            "col_2": 17722.0,
+            "col_3": 16472.0
+          }
+        },
+        {
+          "label": "ECL",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -901.0,
+            "col_2": -1010.0,
+            "col_3": -1079.0
+          }
+        },
+        {
+          "label": "Total operating expenses",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -9330.0,
+            "col_2": -10015.0,
+            "col_3": -8956.0
+          }
+        },
+        {
+          "label": "Share of profit in associates and joint ventures less impairment",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 669.0,
+            "col_2": 594.0,
+            "col_3": -171.0
+          }
+        },
+        {
+          "label": "Profit/(loss) before tax",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 6802.0,
+            "col_2": 7291.0,
+            "col_3": 6266.0
+          }
+        },
+        {
+          "label": "Constant currency revenue excluding notable items",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 17723.0,
+            "col_2": 17834.0,
+            "col_3": 17677.0
+          }
+        },
+        {
+          "label": "Constant currency profit before tax excluding notable items",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 8586.0,
+            "col_2": 9077.0,
+            "col_3": 9148.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "Notable items (reported) ($m)",
+      "items": []
+    },
+    {
+      "header": "Notable items",
+      "items": [
+        {
+          "label": "Revenue",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -1359.0,
+            "col_2": -112.0,
+            "col_3": -1184.0
+          }
+        },
+        {
+          "label": "of which: Banking net interest income",
+          "bold": false,
+          "indent": 1,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": 0.0
+          }
+        },
+        {
+          "label": "of which: Fee and other income",
+          "bold": false,
+          "indent": 1,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -1359.0,
+            "col_2": -112.0,
+            "col_3": -1184.0
+          }
+        },
+        {
+          "label": "ECL",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": 0.0
+          }
+        },
+        {
+          "label": "Operating expenses",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -425.0,
+            "col_2": -1696.0,
+            "col_3": -652.0
+          }
+        },
+        {
+          "label": "Impairment losses of interest in BoCom associate",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": -1000.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "Notable items (constant currency) ($m)",
+      "items": []
+    },
+    {
+      "header": "Notable items",
+      "items": [
+        {
+          "label": "Revenue",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -1359.0,
+            "col_2": -112.0,
+            "col_3": -1205.0
+          }
+        },
+        {
+          "label": "of which: Banking net interest income",
+          "bold": false,
+          "indent": 1,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": 0.0
+          }
+        },
+        {
+          "label": "of which: Fee and other income",
+          "bold": false,
+          "indent": 1,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -1359.0,
+            "col_2": -112.0,
+            "col_3": -1205.0
+          }
+        },
+        {
+          "label": "ECL",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": 0.0
+          }
+        },
+        {
+          "label": "Operating expenses",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -425.0,
+            "col_2": -1674.0,
+            "col_3": -656.0
+          }
+        },
+        {
+          "label": "Impairment losses of interest in BoCom associate",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": -1021.0
+          }
+        },
+        {
+          "label": "Earnings metrics",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 46022.0,
+            "col_2": 45930.0,
+            "col_3": 45838.0
+          }
+        },
+        {
+          "label": "Return on average equity (annualised)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.10800000000000001,
+            "col_2": 0.113,
+            "col_3": 0.107
+          }
+        },
+        {
+          "label": "Return on average tangible equity (annualised)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.11800000000000001,
+            "col_2": 0.12300000000000001,
+            "col_3": 0.115
+          }
+        },
+        {
+          "label": "Return on average tangible equity excluding notable items (annualised)1",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.159,
+            "col_2": 0.166,
+            "col_3": 0.17800000000000002
+          }
+        },
+        {
+          "label": "Earnings per share ($)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.28,
+            "col_2": 0.28,
+            "col_3": 0.26
+          }
+        },
+        {
+          "label": "Earnings per share excluding material notable items and related impacts ($)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.37,
+            "col_2": 0.36,
+            "col_3": 0.39
+          }
+        },
+        {
+          "label": "Constant currency ECL / average gross loans (annualised)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0036,
+            "col_2": 0.004,
+            "col_3": 0.0044
+          }
+        }
+      ]
+    },
+    {
+      "header": "Dividends",
+      "items": [
+        {
+          "label": "Dividends per share - declared in respect of the period ($)",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.45,
+            "col_2": 0.1,
+            "col_3": 0.1
+          }
+        },
+        {
+          "label": "Revenue notable items ($m)",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 46022.0,
+            "col_2": 45930.0,
+            "col_3": 45838.0
+          }
+        },
+        {
+          "label": "Total",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": -1359.0,
+            "col_2": -112.0,
+            "col_3": -1184.0
+          }
+        },
+        {
+          "label": "\u2013 Disposals, wind-downs, acquisitions and related costs",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -1359.0,
+            "col_2": -144.0,
+            "col_3": -48.0
+          }
+        },
+        {
+          "label": "\u2013 Early redemption of legacy securities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": 0.0
+          }
+        },
+        {
+          "label": "\u2013 Dilution loss of interest in BoCom associate",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 32.0,
+            "col_3": -1136.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "Cost notable items ($m)",
+      "items": [
+        {
+          "label": "Total",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": -425.0,
+            "col_2": -1696.0,
+            "col_3": -652.0
+          }
+        },
+        {
+          "label": "\u2013 Disposals, wind-downs, acquisitions and related costs",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -157.0,
+            "col_2": -118.0,
+            "col_3": -177.0
+          }
+        },
+        {
+          "label": "\u2013 Restructuring and other related costs",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -257.0,
+            "col_2": -157.0,
+            "col_3": -475.0
+          }
+        },
+        {
+          "label": "\u2013 Legal provision",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "col_1": -11.0,
+            "col_2": -1421.0,
+            "col_3": 0.0
+          }
+        },
+        {
+          "label": "Impairment losses of interest in BoCom associate ($m)",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "col_1": 0.0,
+            "col_2": 0.0,
+            "col_3": -1000.0
+          }
+        },
+        {
+          "label": "1 We have revised the adjustments made to average tangible equity for the purposes of computing our return on average tangible equity (\u2018RoTE\u2019) excluding notable items measure. Prior to this, we adjusted average tangible equity for the average impact of notable items whereas from 2025 we no longer make adjustments to average tangible equity. Comparatives have been re-presented on the revised basis.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {}
+        }
+      ]
+    }
+  ]
+}
