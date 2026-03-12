@@ -58,11 +58,12 @@ def main() -> None:
     # -----------------------------------------------------------------
     # PLACEHOLDERS: replace these values with your hard-coded arguments.
     # -----------------------------------------------------------------
-    WORKBOOK_PATH = Path("REPLACE_WITH_WORKBOOK_PATH.xlsx")
-    TARGET_WORKSHEET = "REPLACE_WITH_WORKSHEET_NAME"
-    SCHEMA_OUTPUT_PATH = Path("REPLACE_WITH_SCHEMA_OUTPUT_PATH.json")
-    CSV_OUTPUT_DIR = Path("REPLACE_WITH_CSV_OUTPUT_DIR")
-    SCHEMA_MODE = "auto"  # auto | xml | pandas
+    DATA_DIR = Path("data")
+    WORKBOOK_PATH = Path("data/260225-4q-2025-data-pack-excel.xlsx")
+    TARGET_WORKSHEET = "Credit risk"
+    SCHEMA_OUTPUT_PATH = DATA_DIR / 'op_schema' / Path(f"{'-'.join(TARGET_WORKSHEET.lower().split())}.json")
+    CSV_OUTPUT_DIR = DATA_DIR / 'op_csv'
+    SCHEMA_MODE = "xml"  # auto | xml | pandas
 
     placeholders = [
         str(WORKBOOK_PATH),
