@@ -59,7 +59,8 @@ def main() -> None:
     # PLACEHOLDERS: replace these values with your hard-coded arguments.
     # -----------------------------------------------------------------
     DATA_DIR = Path("data")
-    WORKBOOK_PATH = Path("data/260225-4q-2025-data-pack-excel.xlsx")
+    # WORKBOOK_PATH = Path("data/260225-4q-2025-data-pack-excel.xlsx")
+    WORKBOOK_PATH = Path("data/credit-risk-only.xlsx")
     TARGET_WORKSHEET = "Credit risk"
     SCHEMA_OUTPUT_PATH = DATA_DIR / 'op_schema' / Path(f"{'-'.join(TARGET_WORKSHEET.lower().split())}.json")
     CSV_OUTPUT_DIR = DATA_DIR / 'op_csv'
