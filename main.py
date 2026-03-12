@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 from load_sections_to_dfs import export_sections_to_csv, load_sections_from_metadata
-from ref.excel_schema_generator import generate_workbook_schema
+from excel_schema_generator import generate_workbook_schema
 
 
 def run_pipeline(
