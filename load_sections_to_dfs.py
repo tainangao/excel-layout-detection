@@ -42,12 +42,21 @@ def find_next_row(first_col: pd.Series, label: str, start_row: int) -> int | Non
     return None
 
 
-def build_column_plan(
-    sheet_df: pd.DataFrame, sheet_meta: dict[str, Any]
-) -> tuple[list[int], dict[int, str]]:
-    raw_headers = sheet_meta.get("column_headers", {})
-    col_headers = {int(k): str(v) for k, v in raw_headers.items()}
+def parse_column_headers(raw_headers: dict[Any, Any]) -> dict[int, str]:
+    parsed: dict[int, str] = {}
+    for key, value in raw_headers.items():
+        try:
+            col_idx = int(key)
+        except (TypeError, ValueError):
+            continue
+        parsed[col_idx] = str(value)
+    return parsed
 
+
+def build_column_plan(
+    sheet_df: pd.DataFrame,
+    col_headers: dict[int, str],
+) -> tuple[list[int], dict[int, str]]:
     if col_headers:
         selected_cols = sorted(c for c in col_headers if c in sheet_df.columns)
     else:
@@ -76,11 +85,52 @@ def section_key(label: str, index: int, counts: dict[str, int]) -> str:
     return f"{base} ({counts[base]})"
 
 
+def table_headers_by_id(sheet_meta: dict[str, Any]) -> dict[int, dict[int, str]]:
+    table_map: dict[int, dict[int, str]] = {}
+    for table in sheet_meta.get("tables", []):
+        table_id = table.get("table_id")
+        if table_id is None:
+            continue
+        headers = parse_column_headers(table.get("column_headers", {}))
+        if headers:
+            table_map[int(table_id)] = headers
+    return table_map
+
+
+def headers_for_section(
+    sheet_meta: dict[str, Any],
+    section: dict[str, Any],
+    fallback_headers: dict[int, str],
+    table_map: dict[int, dict[int, str]],
+) -> tuple[dict[int, str], int | None]:
+    section_table_id = section.get("table_id")
+    if section_table_id is not None:
+        headers = table_map.get(int(section_table_id))
+        if headers:
+            return headers, int(section_table_id)
+
+    child_table_ids = {
+        int(child["table_id"])
+        for child in section.get("children", [])
+        if child.get("table_id") is not None
+    }
+    if len(child_table_ids) == 1:
+        table_id = next(iter(child_table_ids))
+        headers = table_map.get(table_id)
+        if headers:
+            return headers, table_id
+
+    return fallback_headers, int(
+        section_table_id
+    ) if section_table_id is not None else None
+
+
 def extract_sections_from_sheet(
     sheet_df: pd.DataFrame, sheet_meta: dict[str, Any]
 ) -> tuple[dict[str, pd.DataFrame], list[str]]:
     first_col = sheet_df.iloc[:, 0]
-    selected_cols, rename_map = build_column_plan(sheet_df, sheet_meta)
+    fallback_headers = parse_column_headers(sheet_meta.get("column_headers", {}))
+    table_map = table_headers_by_id(sheet_meta)
 
     start_row = int(sheet_meta.get("data_start_row", 0))
     warnings: list[str] = []
@@ -90,6 +140,14 @@ def extract_sections_from_sheet(
     for idx, section in enumerate(sheet_meta.get("sections", []), start=1):
         label = str(section.get("label", "") or "")
         key = section_key(label, idx, key_counts)
+
+        section_headers, section_table_id = headers_for_section(
+            sheet_meta,
+            section,
+            fallback_headers,
+            table_map,
+        )
+        selected_cols, rename_map = build_column_plan(sheet_df, section_headers)
 
         if label.strip():
             header_row = find_next_row(first_col, label, start_row)
@@ -112,6 +170,7 @@ def extract_sections_from_sheet(
             output[key] = pd.DataFrame(
                 columns=[
                     "excel_row",
+                    "table_id",
                     "role",
                     "indent",
                     "outline_level",
@@ -127,6 +186,9 @@ def extract_sections_from_sheet(
         meta = pd.DataFrame(
             {
                 "excel_row": [row_idx + 1 for row_idx, _ in row_matches],
+                "table_id": [
+                    child.get("table_id", section_table_id) for _, child in row_matches
+                ],
                 "role": [child.get("role", "line_item") for _, child in row_matches],
                 "indent": [child.get("indent", 0) for _, child in row_matches],
                 "outline_level": [
@@ -140,9 +202,53 @@ def extract_sections_from_sheet(
     return output, warnings
 
 
+def infer_excel_path(metadata_path: Path, workbook_name: str) -> Path:
+    candidates = [
+        metadata_path.parent / workbook_name,
+        metadata_path.parent / "data" / workbook_name,
+        metadata_path.parent.parent / "data" / workbook_name,
+        Path.cwd() / workbook_name,
+        Path.cwd() / "data" / workbook_name,
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(
+        f"Excel file not found. Checked: {', '.join(str(c) for c in candidates)}"
+    )
+
+
+def load_sections_from_metadata(
+    metadata: dict[str, Any],
+    excel_path: str | Path,
+    target_sheets: list[str] | None = None,
+) -> tuple[dict[str, dict[str, pd.DataFrame]], list[str]]:
+    excel_path = Path(excel_path)
+    if not excel_path.exists():
+        raise FileNotFoundError(f"Excel file not found: {excel_path}")
+
+    target_set = set(target_sheets) if target_sheets else None
+
+    all_sheets: dict[str, dict[str, pd.DataFrame]] = {}
+    all_warnings: list[str] = []
+
+    for sheet_meta in metadata.get("sheets", []):
+        sheet_name = sheet_meta.get("sheet", "")
+        if target_set and sheet_name not in target_set:
+            continue
+
+        sheet_df = pd.read_excel(excel_path, sheet_name=sheet_name, header=None)
+        section_dfs, warnings = extract_sections_from_sheet(sheet_df, sheet_meta)
+        all_sheets[sheet_name] = section_dfs
+        all_warnings.extend([f"[{sheet_name}] {w}" for w in warnings])
+
+    return all_sheets, all_warnings
+
+
 def load_sections_as_dataframes(
     metadata_path: str | Path,
     excel_path: str | Path | None = None,
+    target_sheets: list[str] | None = None,
 ) -> tuple[dict[str, dict[str, pd.DataFrame]], list[str]]:
     metadata_path = Path(metadata_path)
     metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
@@ -153,23 +259,11 @@ def load_sections_as_dataframes(
             raise ValueError(
                 "Missing 'workbook' in metadata and no --excel path provided."
             )
-        excel_path = metadata_path.parent / "data" / workbook_name
+        excel_path = infer_excel_path(metadata_path, workbook_name)
 
-    excel_path = Path(excel_path)
-    if not excel_path.exists():
-        raise FileNotFoundError(f"Excel file not found: {excel_path}")
-
-    all_sheets: dict[str, dict[str, pd.DataFrame]] = {}
-    all_warnings: list[str] = []
-
-    for sheet_meta in metadata.get("sheets", []):
-        sheet_name = sheet_meta["sheet"]
-        sheet_df = pd.read_excel(excel_path, sheet_name=sheet_name, header=None)
-        section_dfs, warnings = extract_sections_from_sheet(sheet_df, sheet_meta)
-        all_sheets[sheet_name] = section_dfs
-        all_warnings.extend([f"[{sheet_name}] {w}" for w in warnings])
-
-    return all_sheets, all_warnings
+    return load_sections_from_metadata(
+        metadata, excel_path, target_sheets=target_sheets
+    )
 
 
 def safe_slug(text: str) -> str:
@@ -179,22 +273,58 @@ def safe_slug(text: str) -> str:
     return text or "section"
 
 
+def export_sections_to_csv(
+    sheets: dict[str, dict[str, pd.DataFrame]],
+    export_dir: str | Path,
+) -> list[Path]:
+    export_path = Path(export_dir)
+    export_path.mkdir(parents=True, exist_ok=True)
+
+    output_files: list[Path] = []
+    for sheet_name, section_map in sheets.items():
+        sheet_dir = export_path / safe_slug(sheet_name)
+        sheet_dir.mkdir(parents=True, exist_ok=True)
+
+        for section_name, df in section_map.items():
+            out_file = sheet_dir / f"{safe_slug(section_name)}.csv"
+            df.to_csv(out_file, index=False)
+            output_files.append(out_file)
+
+    return output_files
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Load each metadata section from Excel into pandas DataFrames."
+        description="Load metadata sections from Excel into pandas DataFrames."
     )
     parser.add_argument(
-        "--metadata", default="data/op_schema/test-generator.json", help="Path to metadata JSON."
+        "--metadata",
+        default="data/op_schema/test-generator.json",
+        help="Path to metadata JSON.",
     )
-    parser.add_argument("--excel", default='data/260225-4q-2025-data-pack-excel.xlsx', help="Path to source XLSX file.")
+    parser.add_argument(
+        "--excel",
+        default=None,
+        help="Path to source XLSX file. If omitted, infer from metadata.",
+    )
+    parser.add_argument(
+        "--sheet",
+        default=None,
+        help="Optional single worksheet name to load.",
+    )
     parser.add_argument(
         "--export-dir",
-        default='data/op_csv',
+        default=None,
         help="Optional directory to export each section DataFrame as CSV.",
     )
     args = parser.parse_args()
 
-    sheets, warnings = load_sections_as_dataframes(args.metadata, args.excel)
+    target_sheets = [args.sheet] if args.sheet else None
+    sheets, warnings = load_sections_as_dataframes(
+        args.metadata,
+        args.excel,
+        target_sheets=target_sheets,
+    )
 
     print("Loaded section DataFrames:")
     for sheet_name, section_map in sheets.items():
@@ -208,18 +338,8 @@ def main() -> None:
             print(f"- {warning}")
 
     if args.export_dir:
-        export_path = Path(args.export_dir)
-        export_path.mkdir(parents=True, exist_ok=True)
-
-        for sheet_name, section_map in sheets.items():
-            sheet_dir = export_path / safe_slug(sheet_name)
-            sheet_dir.mkdir(parents=True, exist_ok=True)
-
-            for section_name, df in section_map.items():
-                out_file = sheet_dir / f"{safe_slug(section_name)}.csv"
-                df.to_csv(out_file, index=False)
-
-        print(f"\nExported CSVs to: {export_path}")
+        output_files = export_sections_to_csv(sheets, args.export_dir)
+        print(f"\nExported {len(output_files)} CSV files to: {args.export_dir}")
 
 
 if __name__ == "__main__":
