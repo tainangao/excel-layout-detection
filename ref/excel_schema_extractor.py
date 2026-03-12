@@ -20,7 +20,7 @@ import pandas as pd
 import openpyxl
 
 NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"
-XLSX_PATH = "1773278180536_260225-4q-2025-data-pack-excel.xlsx"
+XLSX_PATH = "/Users/jacquelinewong/Documents/GitHub/YOLO/data/260225-4q-2025-data-pack-excel.xlsx"
 
 
 # ──────────────────────────────────────────────
@@ -326,7 +326,7 @@ def compare(xlsx_path: str, sheet_name: str):
 if __name__ == "__main__":
     import sys
     path = sys.argv[1] if len(sys.argv) > 1 else XLSX_PATH
-    sheet = sys.argv[2] if len(sys.argv) > 2 else "Group income statement"
+    sheet = sys.argv[2] if len(sys.argv) > 2 else "Credit risk"
     pandas_out, xml_out = compare(path, sheet)
 
     # Also dump full XML schema as JSON for LLM consumption

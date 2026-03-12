@@ -1,0 +1,1080 @@
+{
+  "sheet": "Credit risk",
+  "approach": "xml",
+  "dimensions": {
+    "rows": 127,
+    "cols": 34
+  },
+  "merged_ranges": [
+    "A73:F73",
+    "G74:K74",
+    "B74:F74",
+    "A127:P127",
+    "A44:P44",
+    "A45:P45",
+    "A48:F48",
+    "B49:E49",
+    "F49:I49",
+    "B32:E32",
+    "F32:I32",
+    "A29:P29",
+    "A28:P28",
+    "A27:P27",
+    "J32:M32",
+    "B7:F7",
+    "A6:P6",
+    "L7:P7",
+    "G7:K7",
+    "A31:F31"
+  ],
+  "header_rows": [
+    {
+      "row_index": 0,
+      "labels": [
+        "HSBC"
+      ],
+      "bold": true,
+      "avg_font_size": 14.0
+    },
+    {
+      "row_index": 1,
+      "labels": [
+        "Credit risk"
+      ],
+      "bold": true,
+      "avg_font_size": 14.0
+    },
+    {
+      "row_index": 5,
+      "labels": [
+        "Summary of credit risk (excluding debt instruments measured at FVOCI) by stage distribution and ECL coverage by industry sector at 31 December 2025"
+      ],
+      "bold": true,
+      "avg_font_size": 9.0
+    },
+    {
+      "row_index": 6,
+      "labels": [
+        "Gross carrying/nominal amount1",
+        "Allowance for ECL",
+        "ECL coverage %"
+      ],
+      "bold": true,
+      "avg_font_size": 9.0
+    },
+    {
+      "row_index": 7,
+      "labels": [
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "POCI2",
+        "Total",
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "POCI2",
+        "Total",
+        "Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "POCI2",
+        "Total"
+      ],
+      "bold": true,
+      "avg_font_size": 9.0
+    },
+    {
+      "row_index": 8,
+      "labels": [
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "$m",
+        "%",
+        "%",
+        "%",
+        "%",
+        "%"
+      ],
+      "bold": true,
+      "avg_font_size": 9.0
+    }
+  ],
+  "column_headers": {
+    "0": "Summary of credit risk (excluding debt instruments measured at FVOCI) by stage distribution and ECL coverage by industry sector at 31 December 2025",
+    "1": "$m",
+    "6": "$m",
+    "11": "%",
+    "2": "$m",
+    "3": "$m",
+    "4": "$m",
+    "5": "$m",
+    "7": "$m",
+    "8": "$m",
+    "9": "$m",
+    "10": "$m",
+    "12": "%",
+    "13": "%",
+    "14": "%",
+    "15": "%"
+  },
+  "sections": [
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Loans and advances to customers at amortised cost",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -10692.0,
+            "%": 0.011000000000000001
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 personal",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -2797.0,
+            "%": 0.006
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 corporate and commercial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -7526.0,
+            "%": 0.018000000000000002
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 non-bank financial institutions",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -369.0,
+            "%": 0.004
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Loans and advances to banks at amortised cost",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -7.0,
+            "%": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Other financial assets measured at amortised cost",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -129.0,
+            "%": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Loans and other credit-related commitments",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -315.0,
+            "%": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 personal",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -27.0,
+            "%": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 corporate and commercial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -272.0,
+            "%": 0.001
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 financial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -16.0,
+            "%": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "Financial guarantees",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -51.0,
+            "%": 0.003
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 personal",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1.0,
+            "%": 0.001
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 corporate and commercial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -49.0,
+            "%": 0.004
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "\u2013 financial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1.0,
+            "%": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "At 31 December 2025",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "$m": -11194.0,
+            "%": 0.004
+          }
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "1 Represents the maximum amount at risk should the contracts be fully drawn upon and clients default.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {}
+        }
+      ]
+    },
+    {
+      "header": null,
+      "items": [
+        {
+          "label": "2 Purchased or originated credit impaired ('POCI').",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {}
+        }
+      ]
+    },
+    {
+      "header": "Stage 2 days past due analysis at 31 December 2025",
+      "items": [
+        {
+          "label": "Loans and advances to customers at amortised cost",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.024,
+            "%": 0.189
+          }
+        },
+        {
+          "label": "\u2013 personal",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.037000000000000005,
+            "%": 0.271
+          }
+        },
+        {
+          "label": "\u2013 corporate and commercial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.019,
+            "%": 0.05
+          }
+        },
+        {
+          "label": "\u2013 non-bank financial institutions",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.006999999999999999,
+            "%": 0.018000000000000002
+          }
+        },
+        {
+          "label": "Loans and advances to banks at amortised cost",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.015,
+            "%": 0.0
+          }
+        },
+        {
+          "label": "Other financial assets measured at amortised cost",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.006,
+            "%": 0.053
+          }
+        },
+        {
+          "label": "1 The days past due amounts are presented on a contractual basis.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {}
+        }
+      ]
+    },
+    {
+      "header": "Total personal lending for loans and advances to customers by stage distribution",
+      "items": [
+        {
+          "label": "First lien residential mortgages",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -480.0
+          }
+        },
+        {
+          "label": "Credit cards",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1301.0
+          }
+        },
+        {
+          "label": "Other personal lending",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1016.0
+          }
+        },
+        {
+          "label": "\u2013  other personal lending which is secured1",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -108.0
+          }
+        },
+        {
+          "label": "\u2013  other personal lending which is unsecured",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -908.0
+          }
+        },
+        {
+          "label": "At 31 December 2025",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "$m": -2797.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "By legal entity",
+      "items": [
+        {
+          "label": "HSBC UK Bank plc",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -772.0
+          }
+        },
+        {
+          "label": "HSBC Bank plc",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -137.0
+          }
+        },
+        {
+          "label": "The Hongkong and Shanghai Banking Corporation Limited",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -801.0
+          }
+        },
+        {
+          "label": "HSBC Bank Middle East Limited",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -70.0
+          }
+        },
+        {
+          "label": "HSBC North America Holdings Inc.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -30.0
+          }
+        },
+        {
+          "label": "Grupo Financiero HSBC, S.A. de C.V.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -983.0
+          }
+        },
+        {
+          "label": "Other trading entities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -4.0
+          }
+        },
+        {
+          "label": "At 31 December 2025",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "$m": -2797.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "Total wholesale lending for loans and advances to banks and customers by stage distribution",
+      "items": [
+        {
+          "label": "Corporate and commercial",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -7526.0
+          }
+        },
+        {
+          "label": "\u2013 agriculture, forestry and fishing",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -97.0
+          }
+        },
+        {
+          "label": "\u2013 mining and quarrying",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -86.0
+          }
+        },
+        {
+          "label": "\u2013 manufacturing",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -960.0
+          }
+        },
+        {
+          "label": "\u2013 electricity, gas, steam and air-conditioning supply",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -126.0
+          }
+        },
+        {
+          "label": "\u2013 water supply, sewerage, waste management and remediation",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -41.0
+          }
+        },
+        {
+          "label": "\u2013 real estate and construction",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -3263.0
+          }
+        },
+        {
+          "label": "\u2013 of which: commercial real estate",
+          "bold": false,
+          "indent": 1,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -2610.0
+          }
+        },
+        {
+          "label": "\u2013 wholesale and retail trade, repair of motor vehicles and motorcycles",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1287.0
+          }
+        },
+        {
+          "label": "\u2013 transportation and storage",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -174.0
+          }
+        },
+        {
+          "label": "\u2013 accommodation and food",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -399.0
+          }
+        },
+        {
+          "label": "\u2013 publishing, audiovisual and broadcasting",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -198.0
+          }
+        },
+        {
+          "label": "\u2013 professional, scientific and technical activities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -218.0
+          }
+        },
+        {
+          "label": "\u2013 administrative and support services",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -395.0
+          }
+        },
+        {
+          "label": "\u2013 public administration and defence, compulsory social security",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.0
+          }
+        },
+        {
+          "label": "\u2013 education",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -26.0
+          }
+        },
+        {
+          "label": "\u2013 health and care",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -32.0
+          }
+        },
+        {
+          "label": "\u2013 arts, entertainment and recreation",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -51.0
+          }
+        },
+        {
+          "label": "\u2013 other services",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -168.0
+          }
+        },
+        {
+          "label": "\u2013 activities of households",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.0
+          }
+        },
+        {
+          "label": "\u2013 extra-territorial organisations and bodies activities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.0
+          }
+        },
+        {
+          "label": "\u2013 government",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -5.0
+          }
+        },
+        {
+          "label": "\u2013 asset-backed securities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.0
+          }
+        },
+        {
+          "label": "Non-bank financial institutions",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -369.0
+          }
+        },
+        {
+          "label": "Loans and advances to banks",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -7.0
+          }
+        },
+        {
+          "label": "At 31 December 2025",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "$m": -7902.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "By legal entity",
+      "items": [
+        {
+          "label": "HSBC UK Bank plc",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1258.0
+          }
+        },
+        {
+          "label": "HSBC Bank plc",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -804.0
+          }
+        },
+        {
+          "label": "The Hongkong and Shanghai Banking Corporation Limited",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -4386.0
+          }
+        },
+        {
+          "label": "HSBC Bank Middle East Limited",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -685.0
+          }
+        },
+        {
+          "label": "HSBC North America Holdings Inc.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -287.0
+          }
+        },
+        {
+          "label": "Grupo Financiero HSBC, S.A. de C.V.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -286.0
+          }
+        },
+        {
+          "label": "Other trading entities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -196.0
+          }
+        },
+        {
+          "label": "Holding companies, shared service centres and intra-group eliminations",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.0
+          }
+        },
+        {
+          "label": "At 31 December 2025",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "$m": -7902.0
+          }
+        }
+      ]
+    },
+    {
+      "header": "Corporate and commercial",
+      "items": [
+        {
+          "label": "HSBC UK Bank plc",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -1173.0
+          }
+        },
+        {
+          "label": "HSBC Bank plc",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -726.0
+          }
+        },
+        {
+          "label": "The Hongkong and Shanghai Banking Corporation Limited",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -4253.0
+          }
+        },
+        {
+          "label": "HSBC Bank Middle East Limited",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -640.0
+          }
+        },
+        {
+          "label": "HSBC North America Holdings Inc.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -276.0
+          }
+        },
+        {
+          "label": "Grupo Financiero HSBC, S.A. de C.V.",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -263.0
+          }
+        },
+        {
+          "label": "Other trading entities",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": -195.0
+          }
+        },
+        {
+          "label": "Holding companies, shared service centres and intra-group eliminations",
+          "bold": false,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "line_item",
+          "sample_values": {
+            "$m": 0.0
+          }
+        },
+        {
+          "label": "At 31 December 2025",
+          "bold": true,
+          "indent": 0,
+          "outline_level": 0,
+          "role": "subtotal",
+          "sample_values": {
+            "$m": -7526.0
+          }
+        }
+      ]
+    }
+  ]
+}
