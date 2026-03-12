@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import posixpath
 import re
 import zipfile
 from pathlib import Path
@@ -121,7 +122,14 @@ def _sheet_file_map(z: zipfile.ZipFile) -> dict[str, str]:
             "",
         )
         target = rid_to_target.get(rid, "")
-        path = target if target.startswith("xl/") else f"xl/{target}"
+        target = target.replace("\\", "/")
+        if target.startswith("/"):
+            path = target.lstrip("/")
+        elif target.startswith("xl/"):
+            path = target
+        else:
+            path = f"xl/{target}"
+        path = posixpath.normpath(path)
         result[name] = path
     return result
 
@@ -188,15 +196,23 @@ def _build_grid(
             v_el = cell_el.find(f"{{{NS}}}v")
             raw_val: Any = None
             val_type = "empty"
-            if v_el is not None and v_el.text is not None:
-                if cell_el.get("t") == "s":
+            cell_type = cell_el.get("t")
+            if cell_type == "inlineStr":
+                is_el = cell_el.find(f"{{{NS}}}is")
+                if is_el is not None:
+                    parts = [t.text or "" for t in is_el.findall(f".//{{{NS}}}t")]
+                    raw_val = "".join(parts)
+                    if raw_val:
+                        val_type = "string"
+            elif v_el is not None and v_el.text is not None:
+                if cell_type == "s":
                     try:
                         raw_val = shared_strings[int(v_el.text)]
                         val_type = "string"
                     except (ValueError, IndexError):
                         raw_val = v_el.text
                         val_type = "string"
-                elif cell_el.get("t") == "b":
+                elif cell_type == "b":
                     raw_val = v_el.text == "1"
                     val_type = "boolean"
                 else:
